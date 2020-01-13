@@ -6,6 +6,7 @@ QT += dbus multimedia
 SOURCES +=     main.cpp
 RESOURCES +=   resources.qrc
 OTHER_FILES += main.qml \
+               ListItem.qml \
                TimePage.qml \
                DatePage.qml \
                BrightnessPage.qml \
