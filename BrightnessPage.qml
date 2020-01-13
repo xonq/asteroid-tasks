@@ -33,7 +33,7 @@ Item {
 
     Label {
         //% "Brightness %1%"
-        text: qsTrId("id-brightness-percentage").arg(displaySettings.brightness)
+        text: qsTrId("bin-task").arg(displaySettings.brightness)
         font.pixelSize: Dims.l(6)
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
@@ -45,7 +45,7 @@ Item {
     }
 
     IconButton {
-        iconName: "ios-remove-circle-outline"
+        iconName: "ios-cross-circle-outline"
         edge: undefinedEdge
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.horizontalCenterOffset: -Dims.w(15)

@@ -41,7 +41,7 @@ Application {
 
         Flickable {
             function elementsNb() {
-                var nb = 12;
+                var nb = 6;
                 if(DeviceInfo.hasSpeaker) nb ++
                 return nb;
             }
@@ -57,8 +57,8 @@ Application {
 
                 ListItem {
                     //% "Time"
-                    title: qsTrId("float_task")
-                    iconName: "ios-clock-outline"
+                    title: qsTrId("practice")
+                    iconName: "xonq-yinyang"
                     onClicked: layerStack.push(timeLayer)
                 }
                 ListItem {
@@ -79,8 +79,19 @@ Application {
                     iconName: "ios-help-circle-outline"
                     onClicked: layerStack.push(aboutLayer)
                 }
+                ListItem {
+                    //% "Add"
+                    iconName: "ios-add-circle-outline"
+                }
+                ListItem {
+                    //% "Remove"
+                    iconName: "ios-remove-circle-outline"
+                }
+
 
                 Item { width: parent.width; height: DeviceInfo.hasRoundScreen ? Dims.h(10) : 0 }
+
+
             }
         }
     }
