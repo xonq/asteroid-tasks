@@ -28,7 +28,7 @@ Item {
         height: width
         anchors.centerIn: parent
         anchors.verticalCenterOffset: -Dims.h(15)
-        name: "ios-sunny-outline"
+        name: "tooth"
     }
 
     Label {
@@ -45,7 +45,7 @@ Item {
     }
 
     IconButton {
-        iconName: "ios-cross-circle-outline"
+        iconName: "ios-remove-circle-outline"
         edge: undefinedEdge
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.horizontalCenterOffset: -Dims.w(15)

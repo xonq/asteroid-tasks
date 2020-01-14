@@ -41,7 +41,7 @@ Application {
 
         Flickable {
             function elementsNb() {
-                var nb = 9;
+                var nb = 6;
                 if(DeviceInfo.hasSpeaker) nb ++
                 return nb;
             }
@@ -56,24 +56,10 @@ Application {
                 Item { width: parent.width; height: DeviceInfo.hasRoundScreen ? Dims.h(10) : 0 }
 
                 ListItem {
-                    //% "DUE"
-                    title: qsTrId("DUE")
-                }
-                ListItem {
                     //% "Time"
                     title: qsTrId("practice")
                     iconName: "xonq-yinyang"
                     onClicked: layerStack.push(timeLayer)
-                }
-                ListItem {
-                    //% "Brightness"
-                    title: qsTrId("flossing")
-                    iconName: "tooth"
-                    onClicked: layerStack.push(brightnessLayer)
-                }
-                ListItem {
-                    //% "ALL"
-                    title: qsTrId("ALL")
                 }
                 ListItem {
                     //% "Date"
@@ -82,26 +68,26 @@ Application {
                     onClicked: layerStack.push(dateLayer)
                 }
                 ListItem {
-                    //% "OPTIONS"
-                    title: qsTrId("OPT")
-                }
-
-                ListItem {
-                    //% "Add"
-                    title: qsTrId("add")
-                    iconName: "ios-add-circle-outline"
-                }
-                ListItem {
-                    //% "Remove"
-                    title: qsTrId("rem")
-                    iconName: "ios-remove-circle-outline"
+                    //% "Brightness"
+                    title: qsTrId("bin_task")
+                    iconName: "ios-sunny-outline"
+                    onClicked: layerStack.push(brightnessLayer)
                 }
                 ListItem {
                     //% "About"
                     title: qsTrId("about")
-                    iconName: "ios-code"
+                    iconName: "ios-help-circle-outline"
                     onClicked: layerStack.push(aboutLayer)
                 }
+                ListItem {
+                    //% "Add"
+                    iconName: "ios-add-circle-outline"
+                }
+                ListItem {
+                    //% "Remove"
+                    iconName: "ios-remove-circle-outline"
+                }
+
 
                 Item { width: parent.width; height: DeviceInfo.hasRoundScreen ? Dims.h(10) : 0 }
 

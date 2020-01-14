@@ -4,8 +4,14 @@
 - generate generic binary goal
 - generate generic float goal
 - generate add/rm function
-- create icons `/usr/local/oecore-x86_64/sysroots/armv7vet2hf-neon-oe-linux-gnueabi/usr/share/icons/asteroid/`
+	- ios-add.svg (add icon)
+- change file names
+- create icons selection page (based on wallpaper) `/usr/local/oecore-x86_64/sysroots/armv7vet2hf-neon-oe-linux-gnueabi/usr/share/icons/asteroid/`
 	- personal
+		- ios body
 	- exercise
+		- ios bicycle
 	- work
+		- ios briefcase
 	- life
+

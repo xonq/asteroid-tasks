@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.11.0, 2020-01-12T20:33:56. -->
+<!-- Written by QtCreator 4.11.0, 2020-01-13T21:52:36. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -241,16 +241,16 @@
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
       <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">RemoteLinux.DirectUploadStep</value>
       <valuelist type="QVariantList" key="ProjectExplorer.RunConfiguration.LastDeployedFiles">
-       <value type="QString">/zhole/software/build-asteroid-goals-AsteroidOS_Watch-Debug/asteroid-goals.desktop</value>
        <value type="QString">/zhole/software/build-asteroid-goals-AsteroidOS_Watch-Debug/asteroid-goals</value>
+       <value type="QString">/zhole/software/build-asteroid-goals-AsteroidOS_Watch-Debug/asteroid-goals.desktop</value>
       </valuelist>
       <valuelist type="QVariantList" key="ProjectExplorer.RunConfiguration.LastDeployedHosts">
        <value type="QString">192.168.2.15</value>
        <value type="QString">192.168.2.15</value>
       </valuelist>
       <valuelist type="QVariantList" key="ProjectExplorer.RunConfiguration.LastDeployedRemotePaths">
-       <value type="QString">/usr/share/applications</value>
        <value type="QString">/usr/bin</value>
+       <value type="QString">/usr/share/applications</value>
       </valuelist>
       <valuelist type="QVariantList" key="ProjectExplorer.RunConfiguration.LastDeployedSysroots">
        <value type="QString">/usr/local/oecore-x86_64/sysroots/armv7vet2hf-neon-oe-linux-gnueabi</value>
@@ -259,12 +259,12 @@
       <value type="bool" key="RemoteLinux.GenericDirectUploadStep.IgnoreMissingFiles">false</value>
       <value type="bool" key="RemoteLinux.GenericDirectUploadStep.Incremental">true</value>
       <valuelist type="QVariantList" key="RemoteLinux.LastDeployedLocalTimes">
-       <value type="QDateTime">2020-01-12T17:30:05.717</value>
-       <value type="QDateTime">2020-01-12T17:51:37.793</value>
+       <value type="QDateTime">2020-01-12T22:31:11.988</value>
+       <value type="QDateTime">2020-01-12T22:28:59.912</value>
       </valuelist>
       <valuelist type="QVariantList" key="RemoteLinux.LastDeployedRemoteTimes">
-       <value type="QDateTime">2020-01-12T12:30:16.000</value>
-       <value type="QDateTime">2020-01-12T12:51:40.000</value>
+       <value type="QDateTime">2020-01-12T17:31:14.000</value>
+       <value type="QDateTime">2020-01-12T17:29:06.000</value>
       </valuelist>
      </valuemap>
      <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">3</value>

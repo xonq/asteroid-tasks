@@ -25,7 +25,7 @@ Item {
     }
 
     Icon {
-        name: "logo-asteroidos"
+        name: "logo-github"
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.topMargin: Dims.h(10)
         anchors.top: parent.top
@@ -35,14 +35,14 @@ Item {
     }
     Label {
         id: osLabel
-        text: about.operatingSystemName
+        text: "github.com/xonq"
         font.bold: true
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: releaseLabel.top
     }
     Label {
         id: releaseLabel
-        text: about.softwareVersion
+        text: "cheers"
         opacity: 0.8
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom

@@ -3,7 +3,8 @@ CONFIG += asteroidapp
 PKGCONFIG += dbus-1 dbus-glib-1
 QT += dbus multimedia
 
-SOURCES +=     main.cpp
+SOURCES +=     main.cpp \
+    json_parse.cpp
 RESOURCES +=   resources.qrc
 OTHER_FILES += main.qml \
                ListItem.qml \
