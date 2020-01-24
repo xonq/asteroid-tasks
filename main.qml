@@ -20,32 +20,48 @@ import QtQuick 2.9
 import org.asteroid.controls 1.0
 import org.asteroid.utils 1.0
 
+
+
 Application {
     id: app
 
+    property var keys: Object.keys(taskObj)
+    property date currentDate: new Date()
+    property int year: currentDate.getFullYear()
+    property int month: currentDate.getMonth()+1
+    property int day: currentDate.getDate()
+    property string passDate: year.toString() + month.toString() + day.toString()
+    property string writeDate: year.toString() + '/' + month.toString() + '/' + day.toString()
+
+    // make change color if tasks are done
     centerColor: "#cc66ff"
     outerColor: "#6600cc"
 
-    Component { id: timeLayer;       TimePage       { } }
+    // components to call from each list item
+    Component { id: floatLayer;      FloatPage      { } }
     Component { id: dateLayer;       DatePage       { } }
-    Component { id: brightnessLayer; BrightnessPage { } }
+    Component { id: binaryLayer;     BinaryPage     { } }
     Component { id: aboutLayer;      AboutPage      { } }
+
+    // NEED FOR these will be defined in c++
+    property var taskObj: jedt.addToday(dataObj, passDate)
+    property var todayArr: taskObj[passDate]
+
+    property var inLength: todayArr.length
+    property var passArr: null
+    property var passIndex: null
+
 
     LayerStack {
         id: layerStack
         firstPage: firstPageComponent
     }
-
     Component {
         id: firstPageComponent
 
         Flickable {
-            function elementsNb() {
-                var nb = 9;
-                if(DeviceInfo.hasSpeaker) nb ++
-                return nb;
-            }
-            contentHeight: elementsNb()*Dims.h(16) + (DeviceInfo.hasRoundScreen ? Dims.h(20) : 0)
+
+            contentHeight: (inLength + 6)*Dims.h(16) + (DeviceInfo.hasRoundScreen ? Dims.h(20) : 0)
             contentWidth: width
             boundsBehavior: Flickable.DragOverBounds
             flickableDirection: Flickable.VerticalFlick
@@ -55,25 +71,96 @@ Application {
 
                 Item { width: parent.width; height: DeviceInfo.hasRoundScreen ? Dims.h(10) : 0 }
 
+                signal sendMessage(string icon)
+
                 ListItem {
-                    //% "DUE"
-                    title: qsTrId("DUE")
+                    //% "ACTUALDATE"
+                    title: qsTrId(writeDate)
+                }
+
+                ListItem {
+                    //% "PRACTICE"
+                    title: qsTrId(todayArr[0][0])
+                    iconName: todayArr[0][5]
+                    onClicked: {
+                        passArr = todayArr[0];
+                        passIndex = 0
+                        layerStack.push(floatLayer);
+                    }
                 }
                 ListItem {
-                    //% "Time"
-                    title: qsTrId("practice")
-                    iconName: "xonq-yinyang"
-                    onClicked: layerStack.push(timeLayer)
+                    //% "FLOSS"
+                    title: qsTrId(todayArr[1][0])
+                    iconName: todayArr[1][5]
+                    onClicked: {
+                        passArr = todayArr[1];
+                        passIndex = 1
+                        layerStack.push(binaryLayer);
+                    }
+                }
+                    //% "EXERCISE"
+                ListItem {
+                    title: qsTrId(todayArr[2][0])
+                    iconName: todayArr[2][5]
+                    onClicked: {
+                        passArr = todayArr[2];
+                        passIndex = 2
+                        layerStack.push(floatLayer);
+                    }
+                }
+                //% "READ"
+                ListItem {
+                    title: qsTrId(todayArr[3][0])
+                    iconName: todayArr[3][5]
+                    onClicked: {
+                        passArr = todayArr[3];
+                        passIndex = 3
+                        layerStack.push(floatLayer);
+                    }
+                }
+                //% "WORK"
+                ListItem {
+                    title: qsTrId(todayArr[4][0])
+                    iconName: todayArr[4][5]
+                    onClicked: {
+                        passArr = todayArr[4];
+                        passIndex = 4
+                        layerStack.push(floatLayer);
+                    }
+                }
+                //% "WALK"
+                ListItem {
+                    title: qsTrId(todayArr[5][0])
+                    iconName: todayArr[5][5]
+                    onClicked: {
+                        passArr = todayArr[5];
+                        passIndex = 5
+                        layerStack.push(floatLayer);
+                    }
+                }
+                //% "IRON"
+                ListItem {
+                    title: qsTrId(todayArr[6][0])
+                    iconName: todayArr[6][5]
+                    onClicked: {
+                        passArr = todayArr[6];
+                        passIndex = 6
+                        layerStack.push(binaryLayer);
+                    }
+                }
+                //% "SLEEP"
+                ListItem {
+                    title: qsTrId(todayArr[7][0])
+                    iconName: todayArr[7][5]
+                    onClicked: {
+                        passArr = todayArr[7];
+                        passIndex = 7
+                        layerStack.push(floatLayer);
+                    }
                 }
                 ListItem {
-                    //% "Brightness"
-                    title: qsTrId("flossing")
-                    iconName: "tooth"
-                    onClicked: layerStack.push(brightnessLayer)
-                }
-                ListItem {
-                    //% "ALL"
-                    title: qsTrId("ALL")
+                    //% "OPTIONS"
+                    title: qsTrId("OPT")
                 }
                 ListItem {
                     //% "Date"
@@ -81,11 +168,6 @@ Application {
                     iconName: "ios-calendar-outline"
                     onClicked: layerStack.push(dateLayer)
                 }
-                ListItem {
-                    //% "OPTIONS"
-                    title: qsTrId("OPT")
-                }
-
                 ListItem {
                     //% "Add"
                     title: qsTrId("add")

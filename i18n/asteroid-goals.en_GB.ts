@@ -3,13 +3,13 @@
 <TS version="2.1" language="en_GB">
 <context>
     <name></name>
-    <message id="id-brightness-percentage">
-        <location filename="../BrightnessPage.qml" line="36"/>
-        <source>Brightness %1%</source>
-        <translation>Brightness %1%</translation>
+    <message id="id-binary">
+        <location filename="../BinaryPage.qml" line="36"/>
+        <source>Binary %1%</source>
+        <translation>Binary %1%</translation>
     </message>
     <message id="id-time-page">
-        <location filename="../TimePage.qml" line="40"/>
+        <location filename="../FloatPage.qml" line="40"/>
         <location filename="../main.qml" line="69"/>
         <source>Time</source>
         <translation>Time</translation>

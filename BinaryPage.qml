@@ -21,19 +21,22 @@ import org.asteroid.controls 1.0
 import org.nemomobile.systemsettings 1.0
 
 Item {
-    DisplaySettings { id: displaySettings }
+//    DisplaySettings { id: displaySettings }
+    id: root
+    property var pop
 
     Icon {
         width: Dims.w(25)
         height: width
         anchors.centerIn: parent
         anchors.verticalCenterOffset: -Dims.h(15)
-        name: "tooth"
+// NEED TO MAKE AN INPUT
+        name: passArr[5]
     }
 
     Label {
-        //% "Brightness %1%"
-        text: qsTrId("bin-task").arg(displaySettings.brightness)
+        //% "Binary %1%"
+        text: qsTrId(passArr[0])
         font.pixelSize: Dims.l(6)
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
@@ -52,9 +55,9 @@ Item {
         anchors.bottom: parent.bottom
         anchors.bottomMargin: Dims.h(10)
         onClicked: {
-            var newVal = displaySettings.brightness - 10
-            if(newVal < 0) newVal = 0
-            displaySettings.brightness = newVal
+            jedt.setJdata(taskObj)
+            taskObj = jedt.editJdata(taskObj, passDate.toString(), passIndex.toString(), "0");
+            root.pop();
         }
     }
 
@@ -68,9 +71,9 @@ Item {
         anchors.bottom: parent.bottom
         anchors.bottomMargin: Dims.h(10)
         onClicked: {
-            var newVal = displaySettings.brightness + 10
-            if(newVal > 100) newVal = 100
-            displaySettings.brightness = newVal
+            jedt.setJdata(taskObj)
+            taskObj = jedt.editJdata(taskObj, passDate.toString(), passIndex.toString(), "1");
+            root.pop();
         }
     }
 }

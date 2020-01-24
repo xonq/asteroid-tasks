@@ -1,0 +1,7 @@
+#include "floatedit.h"
+#include <QFile>
+#include <QJsonDocument>
+#include <QTextStream>
+#include <QJsonObject>
+//#include <QJsonArray>
+

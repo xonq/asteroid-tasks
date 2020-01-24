@@ -1,22 +1,32 @@
 {
-	"01/31/99": {
-		$TASK1: [
-			$FREQ,
-			$TYPE,
-			$UNIT,
-			$ICON,
+	"20200119": [
+		[
+			"practice",
+			"d",
+			0.0000000,
+			"minutes",
+			null,
+			"xonq-yinyang",
+			true
 		],
-		$TASKN: {
-			...
-		}
-	},
-	"01/30/99": {
-		$TASK1: [
-			...
+		[
+			"floss",
+			"d",
+			true,
+			null,
+			true,
+			"tooth",
+			true
 		],
-		$TASKN: [
-			...
+		[
+			"exercise",
+			"d",
+			0.0000000,
+			"minutes",
+			null,
+			"ios-bicycle",
+			true
 		]
-	}
+	]
 }
 

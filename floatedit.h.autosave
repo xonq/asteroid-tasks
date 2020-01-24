@@ -1,0 +1,29 @@
+#ifndef JSON_H
+#define JSON_H
+
+#include <QObject>
+#include <QString>
+
+class JsonEdit : public QObject
+{
+    Q_OBJECT
+    Q_PROPERTY(double value READ value WRITE setValue NOTIFY valueChanged)
+
+public:
+    JsonEdit(QObject *parent = NULL);
+    virtual ~FloatEdit();
+    
+signals:
+    void valueChanged();
+    
+public slots:
+    void update();
+    void setValue(double value);
+  
+private:
+    double edit();
+    void saveJson();
+};
+
+
+#endif // FLOATEDIT_H

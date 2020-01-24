@@ -24,11 +24,9 @@ Item {
     id: root
     property var pop
 
-    DateTimeSettings { id: dtSettings }
-
     PageHeader {
         id: title
-        text: qsTrId("id-date-page")
+        text: qsTrId("Select date")
     }
 
     Row {
@@ -77,11 +75,6 @@ Item {
         iconName: "ios-checkmark-circle-outline"
 
         onClicked: {
-            var date = new Date();
-            date.setDate(dayLV.currentIndex+1)
-            date.setMonth(monthLV.currentIndex)
-            date.setFullYear(yearLV.currentIndex+2000)
-            dtSettings.setDate(date)
 
             root.pop();
         }
