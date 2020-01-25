@@ -1,17 +1,9 @@
-# 2020/01/12
+# 2020/01/24
 
 -<s> try removing excess `.qml`, simplifying scripts </s>
-- generate generic binary goal
-- generate generic float goal
+-<s> generate generic binary goal </s>
+-<s> generate generic float goal </s>
 - generate add/rm function
-	- ios-add.svg (add icon)
-- change file names
 - create icons selection page (based on wallpaper) `/usr/local/oecore-x86_64/sysroots/armv7vet2hf-neon-oe-linux-gnueabi/usr/share/icons/asteroid/`
-	- personal
-		- ios body
-	- exercise
-		- ios bicycle
-	- work
-		- ios briefcase
-	- life
-
+- dynamic main menu generation of list items
+- <s> generate date change functionality </s>
