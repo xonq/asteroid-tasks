@@ -25,6 +25,11 @@ Item {
     id: root
     property var pop
 
+    PageHeader {
+        id: title
+        text: qsTrId(passArr[4].toString())
+    }
+
     Icon {
         width: Dims.w(25)
         height: width
