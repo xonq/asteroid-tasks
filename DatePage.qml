@@ -75,7 +75,11 @@ Item {
         iconName: "ios-checkmark-circle-outline"
 
         onClicked: {
-
+            year = yearLV.currentIndex + 2000;
+            month = monthLV.currentIndex + 1;
+            day = dayLV.currentIndex + 1;
+            passDate = year.toString() + month.toString() + day.toString();
+            todayArr = taskObj[passDate];
             root.pop();
         }
     }
