@@ -31,7 +31,7 @@ Application {
     property int month: currentDate.getMonth()+1
     property int day: currentDate.getDate()
     property string passDate: year.toString() + month.toString() + day.toString()
-    property string writeDate: year.toString() + '/' + month.toString() + '/' + day.toString()
+ //   property string writeDate: year.toString() + '/' + month.toString() + '/' + day.toString()
 
     // make change color if tasks are done
     centerColor: "#cc66ff"
@@ -75,7 +75,7 @@ Application {
 
                 ListItem {
                     //% "ACTUALDATE"
-                    title: qsTrId(writeDate)
+                    title: qsTrId(passDate)
                 }
 
                 ListItem {
