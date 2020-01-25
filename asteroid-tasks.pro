@@ -1,4 +1,4 @@
-TRGET = asteroid-goals
+TRGET = asteroid-tasks
 CONFIG += asteroidapp
 PKGCONFIG += dbus-1 dbus-glib-1
 QT += dbus multimedia
@@ -14,5 +14,5 @@ OTHER_FILES += main.qml \
                BinaryPage.qml \
                AboutPage.qml
 
-lupdate_only{ SOURCES += i18n/asteroid-goals.desktop.h }
+lupdate_only{ SOURCES += i18n/asteroid-tasks.desktop.h }
 TRANSLATIONS = $$files(i18n/$$TARGET.*.ts)
