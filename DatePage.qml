@@ -79,6 +79,7 @@ Item {
             month = monthLV.currentIndex + 1;
             day = dayLV.currentIndex + 1;
             passDate = year.toString() + month.toString() + day.toString();
+            jedt.addToday(dataObj, passDate)
             todayArr = taskObj[passDate];
             root.pop();
         }
