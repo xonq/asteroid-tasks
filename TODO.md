@@ -7,3 +7,4 @@
 - create icons selection page (based on wallpaper) `/usr/local/oecore-x86_64/sysroots/armv7vet2hf-neon-oe-linux-gnueabi/usr/share/icons/asteroid/`
 - dynamic main menu generation of list items
 - <s> generate date change functionality </s>
+- create a page to overview for the week
