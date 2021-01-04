@@ -12,7 +12,8 @@ OTHER_FILES += main.qml \
                FloatPage.qml \
                DatePage.qml \
                BinaryPage.qml \
-               AboutPage.qml
+               AboutPage.qml \
+#               DataView.qml
 
 lupdate_only{ SOURCES += i18n/asteroid-tasks.desktop.h }
 TRANSLATIONS = $$files(i18n/$$TARGET.*.ts)

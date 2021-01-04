@@ -42,7 +42,7 @@ Item {
     }
     Label {
         id: releaseLabel
-        text: "cheers"
+        text: "zachary konkel"
         opacity: 0.8
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom

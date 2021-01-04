@@ -11,6 +11,7 @@
 #include <QJsonValue>
 #include <QJsonDocument>
 #include <QJsonArray>
+#include <QAbstractItemModel>
 
     using namespace std;
 

@@ -42,10 +42,12 @@ Application {
     Component { id: dateLayer;       DatePage       { } }
     Component { id: binaryLayer;     BinaryPage     { } }
     Component { id: aboutLayer;      AboutPage      { } }
+//    Component { id: dataLayer;       DataView       { } }
 
     // NEED FOR these will be defined in c++
     property var taskObj: jedt.addToday(dataObj, passDate)
     property var todayArr: taskObj[passDate]
+    property var dateKeys: taskObj.keys()
 
     property var inLength: todayArr.length
     property var passArr: null
@@ -158,10 +160,23 @@ Application {
                         layerStack.push(floatLayer);
                     }
                 }
+                //% "BEER"
+                ListItem {
+                    title: qsTrId(todayArr[8][0])
+                    iconName: todayArr[8][5]
+                    onClicked: {
+                        passArr = todayArr[8];
+                        passIndex = 8
+                        layerStack.push(floatLayer);
+                    }
+                }
                 ListItem {
                     //% "OPTIONS"
                     title: qsTrId("OPT")
-                }
+/*                    onClicked: {
+                        layerStack.push(dataLayer)
+                    }
+*/                }
                 ListItem {
                     //% "Date"
                     title: qsTrId("date")
