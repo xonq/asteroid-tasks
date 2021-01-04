@@ -12,3 +12,9 @@ put .../asteroid-tasks/json/template.json /home/ceres/tasks
 ```
 
 Look at format to create tasks as add/rem app functions do not work yet.
+
+# overview
+
+json: ` { date: [ [ $NAME, $X, $TYPE, $UNIT, $VALUE, $ICON, $X ] ], ... "template": [...] }`
+app opens, json loads, if the current date does not exist then copy the template.
+tasks are binary or floats
